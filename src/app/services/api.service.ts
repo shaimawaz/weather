@@ -18,7 +18,10 @@ export class ApiService {
     return this.http.get<string>(`${environment.baseurl}forecast?lat=${lat}&lon=${lng}&units=metric&appid=${environment.ApiKey}`);
   }
   getcities(lat,lng) :Observable<string>{
-    return this.http.get<string>(`${environment.baseurl}find?lat=${lat}&lon=${lng}&cnt=15&appid=${environment.ApiKey}`)
+    return this.http.get<string>(`${environment.baseurl}find?lat=${lat}&lon=${lng}&cnt=15&appid=${environment.ApiKey}`);
+  }
+  getdetails(name){
+    return this.http.get<string>(`${environment.baseurl}weather?q=${name}&units=metric&appid=${environment.ApiKey}`);
   }
   
 }

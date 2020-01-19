@@ -1,6 +1,10 @@
 <div class="maincontainer">
     <input type="text" name="search" class="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search...">
     <div *ngFor="let city of this.cities?.list | filter:searchText" class="result">
-      <p>{{city.name}}</p>
+      <p (click)="onselect(city.name)">{{city.name}}</p>
+    </div>
+    <div class="back" routerLink="/">
+        <img src="./../../../assets/images/back.png">
+        <span> Back </span>
     </div>
 </div>
