@@ -1,6 +1,6 @@
 # App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.22.
+Best viewed in phone mode more precisely galaxy s5 / iphone/6/7/8/X
 
 ## Development server
 
