@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, NgForm, FormControl } from '@angular/forms';
 import { PasswordStrengthValidator } from "./../../password-strength.validators";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -11,7 +12,7 @@ export class LoginComponent {
 
   loginForm : FormGroup;
 
-  constructor(private fb: FormBuilder) { 
+  constructor(private fb: FormBuilder, private router : Router) { 
     this.createForm();
   }
   createForm() {
@@ -31,8 +32,7 @@ export class LoginComponent {
     });
   }
   login(){
-    console.log("logged in");
-    return ;
+    this.router.navigateByUrl('/home');
   }
   ngOnInit() {
   }

@@ -1,5 +1,5 @@
 <div class="form">
-    <form [formGroup]="loginForm" (onSubmit)="this.login()">
+    <form [formGroup]="loginForm" (ngSubmit)="this.login()" novalidate>
         {{loginForm.value | json}}
         <div>
             <label>Email: </label>
