@@ -1,6 +1,6 @@
 # App
 
-Best viewed in phone mode more precisely galaxy s5 / iphone/6/7/8/X
+Best viewed in phone mode more precisely galaxy s5 and iphone/6/7/8/X
 
 ## Development server
 
