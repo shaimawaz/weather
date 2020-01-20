@@ -5,14 +5,17 @@
 
 .sunset {
   background-image: url("images/sunset.jpeg");
+  color: white;
 }
 
 .day {
   background-image: url("images/duraing_day.jpeg");
+  color: #8b7a7a;
 }
 
 .sunrise {
   background-image: url("images/morning.jpeg");
+  color: white;
 }
 
 div {

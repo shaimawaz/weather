@@ -1,1 +1,16 @@
-<p>{{this.details.main.temp}}</p>
+<h2>{{this.details.city.name}}</h2>
+<!-- <p>{{this.details.city.country}}</p> -->
+<table>
+    <ng-container *ngFor="let forcast of this.details?.list; index as i">
+        <tr *ngIf="i%8 === 0">
+            <td>{{getdate(forcast?.dt_txt)}}</td>
+            <td>{{this.forcast?.main?.temp | number:'1.0-0'}}&deg;c</td>
+            <td><img src="{{this.icon + forcast?.weather[0]?.icon}}@2x.png"></td>
+            <td>{{this.forcast?.weather[0]?.description}}</td>
+        </tr>
+    </ng-container>
+</table>
+<div class="back" routerLink="/search">
+    <img src="./../../../assets/images/back.png">
+    <span> Back </span>
+</div>

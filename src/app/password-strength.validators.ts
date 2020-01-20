@@ -10,23 +10,23 @@ export const PasswordStrengthValidator = function (control: AbstractControl): Va
 
   let upperCaseCharacters = /[A-Z]+/g
   if (upperCaseCharacters.test(value) === false) {
-    return { passwordStrength: `text has to contine Upper case characters,current value ${value}` };
+    return { passwordStrength: `Password must  contain Uppercase character` };
   }
 
   let lowerCaseCharacters = /[a-z]+/g
   if (lowerCaseCharacters.test(value) === false) {
-    return { passwordStrength: `text has to contine lower case characters,current value ${value}` };
+    return { passwordStrength: `Password must  contain lowercase character` };
   }
 
 
   let numberCharacters = /[0-9]+/g
   if (numberCharacters.test(value) === false) {
-    return { passwordStrength: `text has to contine number characters,current value ${value}` };
+    return { passwordStrength: `Password must  contain number` };
   }
 
   let specialCharacters = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/
   if (specialCharacters.test(value) === false) {
-    return { passwordStrength: `text has to contine special character,current value ${value}` };
+    return { passwordStrength: `Password must  contain a special character` };
   }
   return null;
 }

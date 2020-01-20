@@ -1,0 +1,39 @@
+h2 {
+  text-align: center;
+  padding: 6%;
+}
+
+tr {
+  border-bottom: 1px solid white;
+}
+
+td {
+  padding: 2%;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
+
+.back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0;
+}
+
+.back img {
+  width: 30px;
+  height: 30px;
+}
+
+.back span {
+  margin-top: 0px;
+  padding-top: 0px;
+  font-weight: 100;
+  font-size: 20px;
+}
+/*# sourceMappingURL=details.component.css.map */

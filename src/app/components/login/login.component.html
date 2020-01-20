@@ -1,21 +1,20 @@
+<h1>Weather App</h1>
 <div class="form">
-    <form [formGroup]="loginForm" (ngSubmit)="this.login()" novalidate>
-        {{loginForm.value | json}}
-        <div>
-            <label>Email: </label>
-            <input type="email" required formControlName="email" [class.invalid]="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" name="email">
-            <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched"> email is invalid</div>
+    <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <input type="email" required formControlName="email" placeholder="Email"
+            [class.invalid]="!loginForm.controls['email'].valid && loginForm.controls['email'].touched" name="email">
+        <div *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+            email is invalid
         </div>
-        <div>
-            <label>Password: </label>
-            <input type="password" required formControlName="password" [class.invalid]="loginForm.controls['password'].invalid && loginForm.controls['password'].touched" name="password">
-                <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"> pas is invalid</div>
-                <div class="error-text" *ngIf="loginForm.get('password').hasError('passwordStrength')">
-                    {{loginForm.get('password').errors['passwordStrength']}}
-                </div>
+        <input type="password" required formControlName="password"
+            [class.invalid]="loginForm.controls['password'].invalid && loginForm.controls['password'].touched"
+            name="password" placeholder="Password">
+        <div *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+            password is required
         </div>
+        <div class="error-text" *ngIf="loginForm.get('password').hasError('passwordStrength')">
+            {{loginForm.get('password').errors['passwordStrength']}}
+        </div> <br>
+        <button [disabled]="loginForm.invalid" type="submit" class="button1">Log in</button>
     </form>
-    <input [disabled]="loginForm.invalid" type="submit" value="Log in">
-
-    <p>Form status: {{ loginForm.status | json }}</p>
 </div>

@@ -1,3 +1,8 @@
+.main {
+  background-image: url("./../../../assets/images/rain2.gif");
+  height: 100vh;
+}
+
 .header {
   display: -webkit-box;
   display: -ms-flexbox;

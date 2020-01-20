@@ -1,39 +1,41 @@
-<div class="main">
-<div class="header">
-    <div class="empty"></div>
-    <div class="title">
-        <span>{{this.data?.name}}</span>
-        <span class="date">{{this.gettoday() | date: fullDate}}</span>
-    </div>
-    <div class="search">
-        <img src="./../../../assets/images/search.png" routerLink="/search">
-    </div>
-</div>
-<div class="container">
+<div [class.main]="this.data?.weather?.main === 'Rainy'">
     <div class="today">
-        <div class="left">
-            <div class="description">
-                <img src="{{this.icon + this.data?.weather[0]?.icon}}@2x.png" class="weathericon">
-                <span>{{this.data?.weather[0]?.description | titlecase}}</span>
+        <div class="header">
+            <div class="empty"></div>
+            <div class="title">
+                <span>{{this.data?.name}}</span>
+                <span class="date">{{this.gettoday() | date: fullDate}}</span>
             </div>
-            <h1 class="degree">{{this.data?.main?.temp | number:'1.0-0'}}&deg;</h1>
+            <div class="search">
+                <img src="./../../../assets/images/search.png" routerLink="/search">
+            </div>
         </div>
-        <div class="right">
-            <p class="min">{{this.data?.main?.temp_min | number:'1.0-0'}}&deg;c</p>
-            <p class="max">{{this.data?.main?.temp_max | number:'1.0-0'}}&deg;c</p>
-        </div>
-    </div>
-    <div class="otherdays">
+        <div class="container">
+            <div class="today">
+                <div class="left">
+                    <div class="description">
+                        <img src="{{this.icon + this.data?.weather[0]?.icon}}@2x.png" class="weathericon">
+                        <span>{{this.data?.weather[0]?.description | titlecase}}</span>
+                    </div>
+                    <h1 class="degree">{{this.data?.main?.temp | number:'1.0-0'}}&deg;</h1>
+                </div>
+                <div class="right">
+                    <p class="min">{{this.data?.main?.temp_min | number:'1.0-0'}}&deg;c</p>
+                    <p class="max">{{this.data?.main?.temp_max | number:'1.0-0'}}&deg;c</p>
+                </div>
+            </div>
+            <div class="otherdays">
 
-    </div>
-</div>
-</div>
-<div class="forcastContainer">
-    <ng-container *ngFor="let forcast of this.forecast?.list; index as i">
-        <div class="forcastelement" *ngIf="i%8 === 0 && i!=0">
-            <span class="day">{{getdate(forcast?.dt_txt)}}</span>
-            <img src="{{this.icon + forcast?.weather[0]?.icon}}@2x.png">
-            <span>{{forcast?.main?.temp | number:'1.0-0'}}&deg;</span>
+            </div>
         </div>
-    </ng-container>
+    </div>
+    <div class="forcastContainer">
+        <ng-container *ngFor="let forcast of this.forecast?.list; index as i">
+            <div class="forcastelement" *ngIf="i%8 === 0 && i!=0">
+                <span class="day">{{getdate(forcast?.dt_txt)}}</span>
+                <img src="{{this.icon + forcast?.weather[0]?.icon}}@2x.png">
+                <span>{{forcast?.main?.temp | number:'1.0-0'}}&deg;</span>
+            </div>
+        </ng-container>
+    </div>
 </div>

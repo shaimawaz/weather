@@ -10,9 +10,9 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
-  loginForm : FormGroup;
+  loginForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private router : Router) { 
+  constructor(private fb: FormBuilder, private router: Router) {
     this.createForm();
   }
   createForm() {
@@ -31,7 +31,8 @@ export class LoginComponent {
       ])
     });
   }
-  login(){
+  login() {
+    console.log("logged");
     this.router.navigateByUrl('/home');
   }
   ngOnInit() {

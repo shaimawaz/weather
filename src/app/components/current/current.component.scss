@@ -1,5 +1,8 @@
 $font: "Courier New", Courier, monospace;
-
+.main{
+    background-image: url("./../../../assets/images/rain2.gif");
+    height: 100vh;
+}
 .header{
     display: flex;
     flex-direction: row;

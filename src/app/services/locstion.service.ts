@@ -5,16 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class LocstionService {
 
-  constructor( ) { }
- 
-  getPosition(): Promise<any>
-  {
+  constructor() { }
+
+  getPosition(): Promise<any> {
     return new Promise((resolve, reject) => {
 
       navigator.geolocation.getCurrentPosition(resp => {
 
-          resolve({lng: resp.coords.longitude, lat: resp.coords.latitude});
-        },
+        resolve({ lng: resp.coords.longitude, lat: resp.coords.latitude });
+      },
         err => {
           reject(err);
         });

@@ -22,7 +22,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule, 
+    AppRoutingModule,
     FormsModule,
     Ng2SearchPipeModule,
     ReactiveFormsModule
@@ -31,6 +31,6 @@ import { ReactiveFormsModule } from '@angular/forms';
   bootstrap: [AppComponent]
 })
 export class AppModule {
- 
 
- }
+
+}

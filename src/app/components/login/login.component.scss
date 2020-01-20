@@ -1,5 +1,51 @@
-$alert: rgb(179, 88, 88);
+$alert: rgb(224, 36, 36);
 .invalid{
     border: solid 1px $alert;
-    box-shadow: 0px 0px 1px 1px $alert;
+    background-color: rgb(250, 152, 152);
+    box-shadow: 0px 0px 1px 2px $alert;
+}
+h1{
+    text-align: center;
+    padding: 8%;
+    font-weight: lighter;
+    font-size: 350%;
+    font-family: Brush Script MT, Brush Script Std, cursive;
+}
+.form{
+    position: fixed;
+    top: 25%;
+    left: 20%;
+    text-align: center;
+    form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    input{
+        padding: 2%;
+        margin-top: 8%;
+        border-radius:0.12em;
+        border:none;
+    }
+    
+    .button1{
+        display: inline-block;
+        padding :0.35em 1.2em;
+        border:0.1em solid #FFFFFF;
+        margin:1em ;
+        border-radius:0.3em;
+        box-sizing: border-box;
+        text-decoration:none;
+        font-family:'Roboto',sans-serif;
+        font-weight:300;
+        color:#FFFFFF;
+        text-align:center;
+        transition: all 0.2s;
+        background-color: #00000200;
+    }
+    .button1:hover{
+        color:#000000;
+        background-color:#FFFFFF;
+    }
 }
