@@ -29,7 +29,7 @@
 </div>
 </div>
 <div class="forcastContainer">
-    <ng-container *ngFor="let forcast of this.forecast.list; index as i">
+    <ng-container *ngFor="let forcast of this.forecast?.list; index as i">
         <div class="forcastelement" *ngIf="i%8 === 0 && i!=0">
             <span class="day">{{getdate(forcast?.dt_txt)}}</span>
             <img src="{{this.icon + forcast?.weather[0]?.icon}}@2x.png">

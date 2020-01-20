@@ -4,12 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CurrentComponent } from './components/current/current.component';
 import { SearchComponent } from './components/search/search.component';
 import { DetailsComponent } from './components/details/details.component';
+import { LoginComponent } from './components/login/login.component';
 
 
-const routes:Routes =[
-  {path: "", component:CurrentComponent},
-  {path: "search" , component: SearchComponent},
-  {path:"details/:name" , component:DetailsComponent}
+const routes: Routes = [
+  { path: "home", component: CurrentComponent },
+  { path: "search", component: SearchComponent },
+  { path: "details/:name", component: DetailsComponent },
+  { path: "", component: LoginComponent }
 ]
 @NgModule({
   declarations: [],

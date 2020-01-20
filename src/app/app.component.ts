@@ -11,7 +11,6 @@ export class AppComponent {
 
   getTime() {
     this.hour = this.today.getHours();
-    console.log(this.hour)
     if (this.hour >= 18 || this.hour < 5)
       return "night";
     else if (this.hour >= 16)

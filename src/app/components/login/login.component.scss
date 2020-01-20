@@ -1,0 +1,5 @@
+$alert: rgb(179, 88, 88);
+.invalid{
+    border: solid 1px $alert;
+    box-shadow: 0px 0px 1px 1px $alert;
+}
