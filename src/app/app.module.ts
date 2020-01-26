@@ -10,6 +10,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DetailsComponent } from './components/details/details.component';
 import { LoginComponent } from './components/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HeaderDirective } from './header.directive';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     CurrentComponent,
     SearchComponent,
     DetailsComponent,
-    LoginComponent
+    LoginComponent,
+    HeaderDirective
   ],
   imports: [
     BrowserModule,

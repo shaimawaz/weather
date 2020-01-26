@@ -1,4 +1,7 @@
 <div class="maincontainer">
+  <div class="header">
+    <h3>Weather App</h3>
+  </div>
   <input type="text" name="search" class="search" [(ngModel)]="searchText" autocomplete="off" placeholder="Search...">
   <div *ngFor="let city of this.cities?.list | filter:searchText" class="result">
     <p (click)="onselect(city.name)">{{city.name}}</p>
